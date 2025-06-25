@@ -7,7 +7,7 @@
   },
   "servers": [
     {
-      "url": "https://tc-contact-manager-app-backend.onrender.com"
+      "url": "https://tc-contact-manager-app-backend.onrender.com/api"
     }
   ],
   "paths": {
