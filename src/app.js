@@ -17,7 +17,14 @@ dotenv.config();
 const app = express();
 const swaggerDocument = JSON.parse(fs.readFileSync(new URL('./docs/swagger.json', import.meta.url)));
 
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+  origin: '*', // Or use your frontend URL like 'https://your-frontend.com'
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
+
 app.use(helmet());
 app.use(morgan('dev'));
 app.use(express.json());
